@@ -5,7 +5,6 @@ import StickyNavbar from "@/components/Navbar";
 import NewSection from "@/components/NewSection";
 import Points from "@/components/Points";
 import Slider from "@/components/Slider";
-import { StickyScrollReveal } from "@/components/StickyScrollContent";
 import TeamMembers from "@/components/TeamMembers";
 
 export default function Home() {
@@ -35,7 +34,7 @@ export default function Home() {
         <h1 className="font-semibold text-3xl text-center sm:text-5xl">
           Stories
         </h1>
-        <StickyScrollReveal />
+        <AWS />
       </div>
 
       <div className="my-2 sm:my-10">
@@ -46,7 +45,6 @@ export default function Home() {
       </div>
 
       <TeamMembers />
-      <AWS />
 
       <Footer />
     </div>

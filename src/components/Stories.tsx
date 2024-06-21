@@ -1,47 +1,44 @@
 "use client";
 
-import Image from "next/image";
 import React, { useState } from "react";
+import "tailwindcss/tailwind.css";
 
-interface StoriesProps {
-  data: any;
-}
-
-const Stories: React.FC<StoriesProps> = ({ data }) => {
-  const [activeIndex, setActiveIndex] = useState<number | null>(0);
+const Stories = ({ data }: { data: any }) => {
+  const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="grid place-items-center h-screen w-full overflow-hidden bg-gray-700">
-      <div className="flex gap-4 max-w-[900px] w-[calc(100%-100px)] mx-auto px-4 overflow-hidden">
-        {data.map((data: any, index: number) => (
+    <div className="grid place-items-center mt-6 mb-12 w-full overflow-hidden">
+      <div className="flex lg:flex-row flex-col gap-4 max-w-[90rem] sm:max-w-7xl w-[calc(100%-90px)] mx-auto px-4 overflow-hidden">
+        {data.map((item: any, index: number) => (
           <div
             key={index}
-            className={`relative ${
-              activeIndex === index ? "w-full" : "w-[60px]"
-            } h-[400px] rounded-[1rem] overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.05,0.61,0.41,0.95)]`}
+            className={`relative overflow-hidden rounded-lg transition-all duration-500 ease-[cubic-bezier(0.05,0.61,0.41,0.95)] ${
+              activeIndex === index
+                ? "lg:w-full w-full lg:h-96 h-[500px] sm:h-60"
+                : "lg:w-16 w-full lg:h-96 h-14 sm:h-16"
+            } cursor-pointer`}
             onClick={() => setActiveIndex(index)}
           >
             <img
-              // width={100}
-              // height={100}
-              src={data.image}
-              alt={data.title}
-              className="w-full h-full object-cover cursor-pointer transition-all duration-500 ease-[cubic-bezier(0.05,0.61,0.41,0.95)] rounded-[1rem]"
+              src={item.image}
+              alt={item.title}
+              title={item.title}
+              className="object-cover w-full h-full transition-all duration-500 ease-[cubic-bezier(0.05,0.61,0.41,0.95)]"
             />
             <span
-              className={`block absolute left-4 top-2 bg-black px-4 py-2 rounded-full text-white text-xl transition-all duration-500 ease-[cubic-bezier(0.05,0.61,0.41,0.95)] ${
-                activeIndex === index ? "scale-100" : "scale-0"
+              className={`absolute left-2 top-2 bg-black text-white text-sm md:text-md px-2 py-1 rounded-md md:rounded-full transition-all duration-500 ease-[cubic-bezier(0.05,0.61,0.41,0.95)] ${
+                activeIndex === index ? "scale-100 delay-300" : "scale-0"
               }`}
             >
-              {data.title}
+              {item.title}
             </span>
 
             <span
-              className={`block absolute left-4 top-14 px-4 py-2 rounded-full text-white text-sm transition-all duration-500 ease-[cubic-bezier(0.05,0.61,0.41,0.95)] ${
-                activeIndex === index ? "scale-100" : "scale-0"
+              className={`absolute left-2 top-14 mt-0 md:mt-2 backdrop-blur-md rounded-md text-white text-xs md:text-sm p-2 transition-all duration-500 ease-[cubic-bezier(0.05,0.61,0.41,0.95)] ${
+                activeIndex === index ? "scale-100 delay-300" : "scale-0"
               }`}
             >
-              {data.data}
+              {item.data}
             </span>
           </div>
         ))}
