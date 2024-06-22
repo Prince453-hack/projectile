@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import "tailwindcss/tailwind.css";
 
 const Stories = ({ data }: { data: any }) => {
   const [activeIndex, setActiveIndex] = useState(0);
