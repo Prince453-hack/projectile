@@ -6,6 +6,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
+import Contact from "@/components/Contact";
 
 const inter = Lexend({ subsets: ["latin"], weight: ["400"] });
 
@@ -34,8 +35,8 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            
             {children}
+            <Contact />
           </ThemeProvider>
         </body>
       </html>
