@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/dialog";
 import { Formik, Form, Field } from "formik";
 import { Input } from "./ui/input";
+import { Textarea } from "./ui/textarea";
 
 const Contact = () => {
   const handleSubmit = (values: any, { setSubmitting }: any) => {
@@ -26,7 +27,7 @@ const Contact = () => {
       values.address
     )}%0AEducation: ${encodeURIComponent(
       values.education
-    )}%0AExperience: ${encodeURIComponent(values.experience)}`;
+    )}%0AQuery: ${encodeURIComponent(values.query)}`;
 
     window.location.href = mailtoLink;
     setSubmitting(false);
@@ -127,12 +128,12 @@ const Contact = () => {
                     />
                   )}
                 </Field>
-                <Field name="experience">
+                <Field name="query">
                   {({ field }: any) => (
-                    <Input
+                    <Textarea
                       {...field}
                       type="text"
-                      placeholder="Work Experience"
+                      placeholder="Write Us"
                       className="w-full p-2 rounded-md"
                       required
                     />
