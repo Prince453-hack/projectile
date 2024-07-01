@@ -34,7 +34,7 @@ const Stories = ({ data }: { data: any }) => {
             </span>
 
             <span
-              className={`absolute left-2 top-14 mt-0 md:mt-2 backdrop-blur-md rounded-md text-white text-xs md:text-sm p-2 transition-all duration-500 ease-[cubic-bezier(0.05,0.61,0.41,0.95)] ${
+              className={`absolute left-2 top-14 mt-0 md:mt-2 backdrop-blur-md rounded-md text-white text-sm md:text-lg p-2 transition-all duration-500 ease-[cubic-bezier(0.05,0.61,0.41,0.95)] ${
                 activeIndex === index ? "scale-100 delay-300" : "scale-0"
               }`}
             >

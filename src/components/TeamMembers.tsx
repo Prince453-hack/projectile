@@ -12,7 +12,7 @@ const TeamMembers = () => {
       <div className="">
         <h2 className="mx-2 sm:mx-10 text-2xl sm:text-4xl">Core Members</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 my-5">
           <div className="max-w-sm mx-auto bg-white rounded-lg shadow-md overflow-visible relative mt-16 border border-1 border-black">
             <div className="absolute inset-x-0 top-[-48px] flex justify-center">
               <img
@@ -36,31 +36,6 @@ const TeamMembers = () => {
                 Diptanshu Sinha
               </h3>
               <p className="text-gray-600">IT Professional</p>
-            </div>
-          </div>
-
-          <div className="max-w-sm mx-auto bg-white rounded-lg shadow-md overflow-visible relative mt-16 border border-1 border-black">
-            <div className="absolute inset-x-0 top-[-48px] flex justify-center">
-              <img
-                className="w-24 h-24 rounded-full border-2 border-gray-300 object-cover"
-                src="/RMimg.jpg"
-                alt="Profile"
-              />
-            </div>
-            <div className="pt-16 pb-6 px-6">
-              <p className="text-gray-700 mb-4 text-center">
-                Rishab is a Computer Engineering Graduate from DJ Sanghvi
-                College, India. Currently he is pursuing his masters in Computer
-                Science from North Carolina State University. He has a passion
-                for programming and design having designed the logo and
-                programmed the website.
-              </p>
-              <h3 className="text-lg font-bold text-gray-900 mt-36">
-                Rishab Anil Muzhangathu
-              </h3>
-              <p className="text-gray-600">
-                Grad Student at North Carolina State University
-              </p>
             </div>
           </div>
 
@@ -97,7 +72,7 @@ const TeamMembers = () => {
           Contributing Members
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 my-5">
           <div className="max-w-sm mx-auto bg-white rounded-lg shadow-md overflow-visible relative mt-16 border border-1 border-black">
             <div className="absolute inset-x-0 top-[-48px] flex justify-center">
               <img
@@ -120,6 +95,31 @@ const TeamMembers = () => {
                 Abhishek Sutar
               </h3>
               <p className="text-gray-600">Grad student at UIC, Chicago</p>
+            </div>
+          </div>
+
+          <div className="max-w-sm mx-auto bg-white rounded-lg shadow-md overflow-visible relative mt-16 border border-1 border-black">
+            <div className="absolute inset-x-0 top-[-48px] flex justify-center">
+              <img
+                className="w-24 h-24 rounded-full border-2 border-gray-300 object-cover"
+                src="/RMimg.jpg"
+                alt="Profile"
+              />
+            </div>
+            <div className="pt-16 pb-6 px-6">
+              <p className="text-gray-700 mb-4 text-center">
+                Rishab is a Computer Engineering Graduate from DJ Sanghvi
+                College, India. Currently he is pursuing his masters in Computer
+                Science from North Carolina State University. He has a passion
+                for programming and design having designed the logo and
+                programmed the website.
+              </p>
+              <h3 className="text-lg font-bold text-gray-900 mt-36">
+                Rishab Anil Muzhangathu
+              </h3>
+              <p className="text-gray-600">
+                Grad Student at North Carolina State University
+              </p>
             </div>
           </div>
 
