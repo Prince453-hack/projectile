@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import "tailwindcss/tailwind.css";
 
@@ -92,8 +93,15 @@ const Events: React.FC = () => {
         <div className="my-2 sm:mt-4">
           <h2 className="text-white text-2xl mb-2">How to Participate:</h2>
           <p className="text-sm text-white max-w-full">
-            🔗 Register your Group online at [Registration Portal] once the
-            dates are announced.
+            🔗 Register your Group online at{" "}
+            <Link
+              href="/sign-in"
+              // target="_blank"
+              className="text-blue-700 hover:text-blue-600 hover:underline"
+            >
+              Portal
+            </Link>{" "}
+            once the dates are announced.
           </p>
           <p className="text-sm text-white max-w-full">
             📧 Submit your Research Papers to [Email Address] within the
