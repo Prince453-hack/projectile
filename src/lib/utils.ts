@@ -8,7 +8,7 @@ export function cn(...inputs: ClassValue[]) {
 export function constructMetadata({
   title = "The Secureleap",
   description = "Global education era with diverse opportunities and challenges.",
-  image = "/main-logo.jpg",
+  image = "/fav/thumbnail.jpg",
   icons = "/fav/favicon.ico",
 }: {
   title?: string;

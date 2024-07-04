@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import {
   Dialog,
   DialogContent,
@@ -17,6 +17,15 @@ import Link from "next/link";
 
 const Contact = () => {
   const { session } = useSession();
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+  const handleDialogClose = () => {
+    setIsDialogOpen(false);
+  };
+
+  const handleDialogOpen = () => {
+    setIsDialogOpen(true);
+  };
 
   const handleSubmit = (values: any, { setSubmitting }: any) => {
     const mailtoLink = `mailto:thesecureleap@gmail.com?subject=Contact Request&body=Name: ${encodeURIComponent(
@@ -39,19 +48,52 @@ const Contact = () => {
 
   if (!session) {
     return (
-      <Link href="/sign-in" className="fixed bottom-3 right-3 z-50">
-        <button className="bg-blue-500 hover:bg-blue-600 text-white rounded-xl p-2 shadow-xl">
-          Login to Connect
-        </button>
-      </Link>
+      <div className="fixed bottom-3 right-3 z-50">
+        <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+          <DialogTrigger asChild>
+            <button
+              className="bg-blue-500 hover:bg-blue-600 text-white rounded-xl p-2 shadow-xl"
+              onClick={handleDialogOpen}
+            >
+              Connect Us
+            </button>
+          </DialogTrigger>
+          <DialogContent className="bg-white p-4">
+            <DialogHeader>
+              <DialogTitle className="font-semibold text-center text-black">
+                Sign Up to Connect Us
+              </DialogTitle>
+              <Link href="/sign-up">
+                <DialogDescription
+                  className="text-center text-white bg-purple-700 mt-7 rounded-md px-2 py-2 hover:bg-purple-600"
+                  onClick={handleDialogClose}
+                >
+                  Sign Up
+                </DialogDescription>
+              </Link>
+              <Link href="/sign-in" className="mt-2">
+                <DialogDescription
+                  className="text-center text-black bg-zinc-200 mt-2 rounded-md px-2 py-2 hover:bg-zinc-300"
+                  onClick={handleDialogClose}
+                >
+                  Sign In
+                </DialogDescription>
+              </Link>
+            </DialogHeader>
+          </DialogContent>
+        </Dialog>
+      </div>
     );
   }
 
   return (
     <div className="fixed bottom-3 right-3 z-50">
-      <Dialog>
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogTrigger asChild>
-          <button className="bg-blue-500 hover:bg-blue-600 text-white rounded-xl p-2 shadow-xl">
+          <button
+            className="bg-blue-500 hover:bg-blue-600 text-white rounded-xl p-2 shadow-xl"
+            onClick={handleDialogOpen}
+          >
             Connect Us
           </button>
         </DialogTrigger>
