@@ -9,7 +9,7 @@ export function constructMetadata({
   title = "The Secureleap",
   description = "Global education era with diverse opportunities and challenges.",
   image = "/thumbnail.jpg",
-  icons = "/favicon.ico",
+  icons = "/fav/favicon.ico",
 }: {
   title?: string;
   description?: string;
