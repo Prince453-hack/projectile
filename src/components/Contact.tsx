@@ -12,8 +12,12 @@ import {
 import { Formik, Form, Field } from "formik";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
+import { useSession } from "@clerk/nextjs";
+import Link from "next/link";
 
 const Contact = () => {
+  const { session } = useSession();
+
   const handleSubmit = (values: any, { setSubmitting }: any) => {
     const mailtoLink = `mailto:thesecureleap@gmail.com?subject=Contact Request&body=Name: ${encodeURIComponent(
       values.name
@@ -33,12 +37,22 @@ const Contact = () => {
     setSubmitting(false);
   };
 
+  if (!session) {
+    return (
+      <Link href="/sign-in" className="fixed bottom-3 right-3 z-50">
+        <button className="bg-blue-500 hover:bg-blue-600 text-white rounded-xl p-2 shadow-xl">
+          Login to Connect
+        </button>
+      </Link>
+    );
+  }
+
   return (
     <div className="fixed bottom-3 right-3 z-50">
       <Dialog>
         <DialogTrigger asChild>
           <button className="bg-blue-500 hover:bg-blue-600 text-white rounded-xl p-2 shadow-xl">
-            Contact Us?
+            Connect Us
           </button>
         </DialogTrigger>
         <DialogContent className="bg-white p-4">

@@ -1,18 +1,18 @@
 export const navbarLinks = [
   {
     label: "Community",
-    route: "#",
+    route: "#community",
   },
   {
     label: "Stories",
-    route: "#",
+    route: "#stories",
   },
   {
     label: "Events",
-    route: "#",
+    route: "#event",
   },
   {
     label: "About Us",
-    route: "#",
+    route: "#secure",
   },
 ];

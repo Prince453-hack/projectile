@@ -8,6 +8,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .cl-userButtonOuterIdentifier {
   color: white;
 }

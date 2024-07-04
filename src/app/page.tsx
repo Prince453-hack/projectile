@@ -13,7 +13,7 @@ export default function Home() {
       <StickyNavbar />
       <Slider />
 
-      <div className="mx-14 my-2 sm:my-5 space-y-6">
+      <div className="mx-14 my-2 sm:my-5 space-y-6" id="secure">
         <h1 className="font-semibold text-3xl sm:text-4xl underline underline-offset-8">
           WHY THESECURELEAP?
         </h1>
@@ -30,14 +30,14 @@ export default function Home() {
       </div>
       <NewSection />
 
-      <div className="">
+      <div className="" id="stories">
         <h1 className="font-semibold text-3xl text-center sm:text-5xl">
           Stories
         </h1>
         <AWS />
       </div>
 
-      <div className="my-2 sm:my-10">
+      <div className="my-2 sm:my-10" id="event">
         <h1 className="font-semibold text-3xl sm:text-4xl text-center">
           Events
         </h1>
