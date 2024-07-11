@@ -22,9 +22,9 @@ const NewsComponent: React.FC = () => {
   useEffect(() => {
     const fetchNews = async () => {
       setLoading(true);
-      const apiKey = "326f07e9f5054e3089c805e2f4f86adf";
+      // const apiKey = process.env.NEWS_API_KEY;
       const query = "education AND student";
-      const url = `https://newsapi.org/v2/everything?q=${query}&apiKey=${apiKey}`;
+      const url = `https://newsapi.org/v2/everything?q=${query}&apiKey=611d7daab04f4fd4aa0d54413c8b8f95`;
 
       try {
         const response = await fetch(url);
@@ -85,7 +85,9 @@ const NewsComponent: React.FC = () => {
               )}
               <div className="flex flex-col justify-between">
                 <div>
-                  <h2 className="text-2xl font-bold mb-2">{article.title}</h2>
+                  <h2 className="text-2xl font-bold mb-2 dark:text-zinc-950">
+                    {article.title}
+                  </h2>
                   <p className="text-gray-800 text-md mb-4">
                     {article.description}
                   </p>

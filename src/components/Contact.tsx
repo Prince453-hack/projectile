@@ -19,7 +19,6 @@ const Contact = () => {
   const { session } = useSession();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const { user } = useUser();
-  console.log(user);
 
   const handleDialogClose = () => {
     setIsDialogOpen(false);
