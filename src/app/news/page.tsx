@@ -66,7 +66,7 @@ const NewsFeed = () => {
             {articles.slice(0, visibleCount).map((article, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg shadow-lg p-2 mb-2"
+                className="bg-zinc-100 border-2 rounded-lg shadow-lg p-2 mb-2"
               >
                 <h3 className="text-lg font-semibold mb-1 text-black">
                   {article.title}
