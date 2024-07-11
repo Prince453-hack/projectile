@@ -1,130 +1,65 @@
 "use client";
+import React, { useState, useEffect } from "react";
 
-import { ArrowLeft } from "lucide-react";
-import Link from "next/link";
-import React, { useEffect, useState } from "react";
-
-interface Article {
+interface NewsArticle {
   title: string;
   description: string;
-  url: string;
-  imageUrl: string;
-  source: {
-    name: string;
-  };
+  link: string;
+  pubDate: string;
+  source_id: string;
 }
 
-const NewsComponent: React.FC = () => {
-  const [articles, setArticles] = useState<Article[]>([]);
-  const [visibleCount, setVisibleCount] = useState<number>(10);
-  const [loading, setLoading] = useState<boolean>(true);
+const NewsFeed = () => {
+  const [articles, setArticles] = useState<NewsArticle[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const fetchNews = async () => {
-      setLoading(true);
-      // const apiKey = process.env.NEWS_API_KEY;
-      const query = "education AND student";
-      const url = `https://newsapi.org/v2/everything?q=${query}&apiKey=611d7daab04f4fd4aa0d54413c8b8f95`;
+    const apiKey = "pub_483776c294ef4dfc80dafa8f9732d05809c1a";
+    const query = encodeURIComponent("education student");
+    const url = `https://newsdata.io/api/1/news?apikey=${apiKey}&q=${query}`;
 
+    const fetchNews = async () => {
       try {
         const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
         const data = await response.json();
-        setArticles(
-          data.articles.map((article: any) => ({
-            title: article.title,
-            description: article.description,
-            url: article.url,
-            imageUrl: article.urlToImage,
-            source: {
-              name: article.source.name,
-            },
-          }))
-        );
-      } catch (error) {
-        console.error("Error fetching news:", error);
-      } finally {
-        setLoading(false);
+        setArticles(data.results);
+        setIsLoading(false);
+      } catch (error: any) {
+        setError("Failed to fetch news: " + error.message);
+        setIsLoading(false);
       }
     };
 
     fetchNews();
   }, []);
 
-  const showMoreArticles = () => {
-    setVisibleCount((prevCount) => prevCount + 5);
-  };
-
   return (
-    <div className="container mx-auto px-4 py-8 min-h-screen">
-      <Link href="/">
-        <p className="flex items-center mb-8">
-          <ArrowLeft className="mr-2" />
-          <img src="/fav/favicon.ico" className="w-7 h-7" />
-        </p>
-      </Link>
-      <h1 className="text-4xl font-bold text-center underline underline-offset-8 mb-16">
-        Education and Student News
-      </h1>
-      {loading ? (
-        <p className="text-center min-h-screen text-2xl font-semibold animate-pulse justify-center mt-10">
-          Loading...
-        </p>
+    <div>
+      {isLoading ? (
+        <p>Loading news...</p>
+      ) : error ? (
+        <p>Error: {error}</p>
       ) : (
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-          {articles.slice(0, visibleCount).map((article, index) => (
-            <div
-              key={index}
-              className="flex flex-col md:flex-row bg-slate-100 p-5 rounded-lg shadow-lg"
-            >
-              {article.imageUrl && (
-                <img
-                  src={article.imageUrl}
-                  alt={article.title}
-                  className="md:w-1/3 w-full lg:w-[16rem] h-[11rem] rounded mr-4"
-                />
-              )}
-              <div className="flex flex-col justify-between">
-                <div>
-                  <h2 className="text-2xl font-bold mb-2 dark:text-zinc-950">
-                    {article.title}
-                  </h2>
-                  <p className="text-gray-800 text-md mb-4">
-                    {article.description}
-                  </p>
-                </div>
-                <div>
-                  <p className="font-semibold text-gray-600">
-                    <strong>Source:</strong>{" "}
-                    <span className="bg-green-400 py-1 px-2 rounded-lg text-white">
-                      {article.source.name}
-                    </span>
-                  </p>
-                  <a
-                    href={article.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-500 hover:underline"
-                  >
-                    Read more
-                  </a>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
-      {visibleCount < articles.length && (
-        <div className="text-center mt-8">
-          <button
-            onClick={showMoreArticles}
-            className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
-          >
-            Show More
-          </button>
-        </div>
+        articles.map((article, index) => (
+          <div key={index}>
+            <h3>{article.title}</h3>
+            <p>{article.description || "No description available."}</p>
+            <a href={article.link} target="_blank" rel="noopener noreferrer">
+              Read more
+            </a>
+            <p>
+              Published on: {new Date(article.pubDate).toLocaleDateString()}
+            </p>
+            <p>Source ID: {article.source_id}</p>
+          </div>
+        ))
       )}
     </div>
   );
 };
 
-export default NewsComponent;
+export default NewsFeed;
