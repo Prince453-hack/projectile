@@ -3,8 +3,8 @@ import React from "react";
 const NewSection = () => {
   return (
     <div>
-      <div className="bg-violet-500 rounded-md mx-5 sm:mx-10 my-2 px-2 py-10 text-white">
-        <h1 className="font-semibold text-3xl text-center sm:text-5xl text-white mb-7">
+      <div className="border-2 border-violet-950 rounded-md mx-5 sm:mx-10 my-5 mb-10 px-2 py-10 text-zinc-950">
+        <h1 className="font-semibold text-3xl text-center sm:text-5xl text-purple-950 mb-7">
           HOW CAN WE HELP?
         </h1>
         <p className="font-normal text-center mx-2 sm:mx-7 lg:mx-20 text-lg">
