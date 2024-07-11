@@ -12,12 +12,14 @@ import {
 import { Formik, Form, Field } from "formik";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
-import { useSession } from "@clerk/nextjs";
+import { useSession, useUser } from "@clerk/nextjs";
 import Link from "next/link";
 
 const Contact = () => {
   const { session } = useSession();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const { user } = useUser();
+  console.log(user);
 
   const handleDialogClose = () => {
     setIsDialogOpen(false);
@@ -108,10 +110,10 @@ const Contact = () => {
           </DialogHeader>
           <Formik
             initialValues={{
-              name: "",
-              email: "",
+              name: user?.fullName || "Name",
+              email: user?.emailAddresses || "",
               country: "",
-              phone: "",
+              phone: user?.phoneNumbers || "",
               address: "",
               education: "",
               experience: "",

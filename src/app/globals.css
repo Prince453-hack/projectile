@@ -32,6 +32,20 @@ html {
   background: #03005bdb;
 }
 
+@keyframes moveLeft {
+  0%,
+  100% {
+    transform: translateX(-2px);
+  }
+  50% {
+    transform: translateX(2px);
+  }
+}
+
+.element {
+  animation: moveLeft 1s infinite;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
