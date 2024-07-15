@@ -20,8 +20,8 @@ const NewsFeed = () => {
   const [visibleCount, setVisibleCount] = useState(6);
 
   useEffect(() => {
-    const apiKey = "pub_483776c294ef4dfc80dafa8f9732d05809c1a";
-    const query = encodeURIComponent("education");
+    const apiKey = "pub_4865201cb821877f71cf9c1d51c545c17fb82";
+    const query = encodeURIComponent("education news");
     const url = `https://newsdata.io/api/1/news?apikey=${apiKey}&q=${query}`;
 
     const fetchNews = async () => {
