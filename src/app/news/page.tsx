@@ -17,11 +17,11 @@ const NewsFeed = () => {
   const [articles, setArticles] = useState<NewsArticle[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [visibleCount, setVisibleCount] = useState(9);
+  const [visibleCount, setVisibleCount] = useState(6);
 
   useEffect(() => {
     const apiKey = "pub_483776c294ef4dfc80dafa8f9732d05809c1a";
-    const query = encodeURIComponent("education student");
+    const query = encodeURIComponent("Education Sector Developments");
     const url = `https://newsdata.io/api/1/news?apikey=${apiKey}&q=${query}`;
 
     const fetchNews = async () => {
@@ -50,11 +50,11 @@ const NewsFeed = () => {
     <div className="max-w-6xl mx-auto px-4 py-8 min-h-screen">
       <Link href="/">
         <p className="flex items-center justify-start">
-          <ArrowLeft className="mr-4" size={30} />
-          <img src="/fav/favicon.ico" className="h-10 w-10" />
+          <ArrowLeft className="mr-4" size={25} />
+          <img src="/fav/favicon.ico" className="h-8 w-8" />
         </p>
       </Link>
-      <h1 className="my-10 text-center text-5xl">Today&apos;s News</h1>
+      <h1 className="my-14 text-center text-5xl">Today&apos;s News</h1>
 
       {isLoading ? (
         <p className="text-center text-2xl animate-pulse">Loading news...</p>
@@ -66,7 +66,7 @@ const NewsFeed = () => {
             {articles.slice(0, visibleCount).map((article, index) => (
               <div
                 key={index}
-                className="bg-zinc-100 border-2 rounded-lg shadow-lg p-2 mb-2"
+                className="bg-zinc-100 border-2 rounded-lg shadow-lg p-2 mb-2 hover:scale-105 transition-all duration-200"
               >
                 <h3 className="text-lg font-semibold mb-1 text-black">
                   {article.title}
@@ -92,8 +92,11 @@ const NewsFeed = () => {
                 <p className="text-gray-600 mt-1 text-xs">
                   Published on: {new Date(article.pubDate).toLocaleDateString()}
                 </p>
-                <p className="text-gray-600 text-xs">
-                  Source ID: {article.source_id}
+                <p className="text-gray-600 text-xs my-2">
+                  Source ID:{" "}
+                  <span className="text-white px-1 py-1 bg-blue-400 rounded-md">
+                    {article.source_id}
+                  </span>
                 </p>
               </div>
             ))}

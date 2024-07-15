@@ -3,7 +3,7 @@ import React from "react";
 const NewSection = () => {
   return (
     <div>
-      <div className=" z-[-2] my-2 mx-10 rounded-xl bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]">
+      <div className=" z-[-2] my-2 mx-10 rounded-xl bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] dark:bg-[radial-gradient(#ffffff33_1px,#284b94_1px)] bg-[size:20px_20px]">
         <div className="mx-5 sm:mx-10 my-5 mb-10 px-2 py-10 text-zinc-950">
           <h1 className="font-semibold text-3xl text-center sm:text-5xl text-purple-100 mb-7">
             HOW CAN WE HELP?
