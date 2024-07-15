@@ -13,7 +13,7 @@ const TeamMembers = () => {
         <h2 className="mx-2 sm:mx-10 text-2xl sm:text-4xl">Core Members</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-5">
-          <div className="max-w-sm mx-auto bg-white rounded-lg shadow-md overflow-visible relative mt-16 border border-1 border-black">
+          <div className="max-w-sm mx-auto bg-white rounded-lg shadow-md overflow-visible relative mt-16 border border-1 border-black hover:scale-105 transition-all">
             <div className="absolute inset-x-0 top-[-48px] flex justify-center">
               <img
                 className="w-24 h-24 rounded-full border-2 border-gray-300 object-cover"
@@ -39,7 +39,7 @@ const TeamMembers = () => {
             </div>
           </div>
 
-          <div className="max-w-sm mx-auto bg-white rounded-lg shadow-md overflow-visible relative mt-16 border border-1 border-black">
+          <div className="max-w-sm mx-auto bg-white rounded-lg shadow-md overflow-visible relative mt-16 border border-1 border-black hover:scale-105 transition-all">
             <div className="absolute inset-x-0 top-[-48px] flex justify-center">
               <img
                 className="w-24 h-24 rounded-full border-2 border-gray-300 object-cover"
@@ -64,7 +64,7 @@ const TeamMembers = () => {
             </div>
           </div>
 
-          <div className="max-w-sm mx-auto bg-white rounded-lg shadow-md overflow-visible relative mt-16 border border-1 border-black">
+          <div className="max-w-sm mx-auto bg-white rounded-lg shadow-md overflow-visible relative mt-16 border border-1 border-black hover:scale-105 transition-all">
             <div className="absolute inset-x-0 top-[-48px] flex justify-center">
               <img
                 className="w-24 h-24 rounded-full border-2 border-gray-300 object-fill"
@@ -98,7 +98,7 @@ const TeamMembers = () => {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-5">
-          <div className="max-w-sm mx-auto bg-white rounded-lg shadow-md overflow-visible relative mt-16 border border-1 border-black">
+          <div className="max-w-sm mx-auto bg-white rounded-lg shadow-md overflow-visible relative mt-16 border border-1 border-black hover:scale-105 transition-all">
             <div className="absolute inset-x-0 top-[-48px] flex justify-center">
               <img
                 className="w-24 h-24 rounded-full border-2 border-gray-300 object-cover"
@@ -123,7 +123,7 @@ const TeamMembers = () => {
             </div>
           </div>
 
-          <div className="max-w-sm mx-auto bg-white rounded-lg shadow-md overflow-visible relative mt-16 border border-1 border-black">
+          <div className="max-w-sm mx-auto bg-white rounded-lg shadow-md overflow-visible relative mt-16 border border-1 border-black hover:scale-105 transition-all">
             <div className="absolute inset-x-0 top-[-48px] flex justify-center">
               <img
                 className="w-24 h-24 rounded-full border-2 border-gray-300 object-cover"
@@ -152,7 +152,7 @@ const TeamMembers = () => {
             </div>
           </div>
 
-          <div className="max-w-sm mx-auto bg-white rounded-lg shadow-md overflow-visible relative mt-16 border border-1 border-black">
+          <div className="max-w-sm mx-auto bg-white rounded-lg shadow-md overflow-visible relative mt-16 border border-1 border-black hover:scale-105 transition-all">
             <div className="absolute inset-x-0 top-[-48px] flex justify-center">
               <img
                 className="w-24 h-24 rounded-full border-2 border-gray-300 object-cover"
