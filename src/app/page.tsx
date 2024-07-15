@@ -30,7 +30,7 @@ export default function Home() {
       </div>
       <NewSection />
 
-      <div className="" id="stories">
+      <div className="">
         <h1 className="font-semibold text-3xl text-center sm:text-5xl">
           Stories
         </h1>

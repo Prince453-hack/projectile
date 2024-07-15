@@ -8,7 +8,10 @@ const NewSection = () => {
           <h1 className="font-semibold text-3xl text-center sm:text-5xl text-purple-100 mb-7">
             HOW CAN WE HELP?
           </h1>
-          <p className="font-normal text-center mx-2 sm:mx-7 lg:mx-20 text-lg text-white">
+          <p
+            className="font-normal text-center mx-2 sm:mx-7 lg:mx-20 text-lg text-white"
+            id="community"
+          >
             The aim of this platform is to ease this stress and help students of
             all ages leap to new horizons, diligently. Students under stress are
             not inanimate data points and are more than important to be
@@ -21,11 +24,14 @@ const NewSection = () => {
         </div>
       </div>
 
-      <div className="my-2 sm:my-12 mx-1 sm:mx-2 space-y-10" id="community">
+      <div className="my-2 sm:my-12 mx-1 sm:mx-2 space-y-10">
         <h1 className="font-semibold text-3xl text-center sm:text-5xl mb-2">
           Community
         </h1>
-        <p className="font-normal text-center mx-0 sm:mx-7 lg:mx-12 text-lg">
+        <p
+          className="font-normal text-center mx-0 sm:mx-7 lg:mx-12 text-lg"
+          id="stories"
+        >
           While scouting for the right college it is easy to get distracted with
           all the information out there and it gets harder to find the right
           fit. In such a scenario, the experience of senior students who have
