@@ -21,7 +21,7 @@ const NewsFeed = () => {
 
   useEffect(() => {
     const apiKey = "pub_483776c294ef4dfc80dafa8f9732d05809c1a";
-    const query = encodeURIComponent("Education Sector Developments");
+    const query = encodeURIComponent("education");
     const url = `https://newsdata.io/api/1/news?apikey=${apiKey}&q=${query}`;
 
     const fetchNews = async () => {
