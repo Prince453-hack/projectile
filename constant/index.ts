@@ -11,8 +11,8 @@ export const navbarLinks = [
     label: "Events",
     route: "#event",
   },
-  {
-    label: "News",
-    route: "/news",
-  },
+  // {
+  //   label: "News",
+  //   route: "/news",
+  // },
 ];
