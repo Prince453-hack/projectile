@@ -3,7 +3,7 @@ import React from "react";
 const TeamMembers = () => {
   return (
     <div>
-      <div className="">
+      <div className="mt-28">
         <h1 className="font-semibold text-3xl text-center sm:text-5xl">
           OUR TEAM
         </h1>

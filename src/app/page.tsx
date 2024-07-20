@@ -38,7 +38,7 @@ export default function Home() {
       </div>
 
       <div className="my-2 sm:my-10" id="event">
-        <h1 className="font-semibold text-3xl sm:text-4xl text-center">
+        <h1 className="font-semibold text-3xl sm:text-4xl text-center mt-20 md:mt-28">
           Events
         </h1>
         <Events />

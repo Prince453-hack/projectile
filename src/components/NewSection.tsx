@@ -24,7 +24,7 @@ const NewSection = () => {
         </div>
       </div>
 
-      <div className="my-2 sm:my-12 mx-1 sm:mx-2 space-y-10">
+      <div className="my-2 sm:my-28 mx-1 sm:mx-2 space-y-10">
         <h1 className="font-semibold text-3xl text-center sm:text-5xl mb-2">
           Community
         </h1>
