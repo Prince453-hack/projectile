@@ -24,12 +24,12 @@ const page = () => {
             <h1>Home</h1>
           </Link>
           <span className="h-4 border border-black mx-3 rotate-12" />
-          <p>TSL Newsletter</p>
+          <p>TSL Articles</p>
         </div>
 
         <div className="ml-10 md:ml-12 lg:ml-20 mt-10 md:mt-12 lg:mt-20">
           <h1 className="font-extrabold text-3xl md:text-6xl uppercase">
-            TSL Newsletters
+            TSL Articles
           </h1>
         </div>
 

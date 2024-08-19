@@ -10,7 +10,7 @@ const Footer = () => {
         </div>
         <div className="flex flex-col sm:flex-row space-y-5 sm:space-y-0 sm:space-x-5 text-white text-center sm:text-left text-sm">
           <a href="#community">Community</a>
-          <a href="#stories">Stories</a>
+          <a href="/articles">Articles</a>
           <a href="#event">Event</a>
           {/* <a href="#secure">About Us</a> */}
         </div>

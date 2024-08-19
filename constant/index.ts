@@ -4,8 +4,8 @@ export const navbarLinks = [
     route: "#community",
   },
   {
-    label: "Newsletters",
-    route: "/newsletters",
+    label: "Articles",
+    route: "/articles",
   },
   {
     label: "Events",
