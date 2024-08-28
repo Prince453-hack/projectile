@@ -9,7 +9,7 @@ const NewSection = () => {
             HOW CAN WE HELP?
           </h1>
           <p
-            className="font-normal text-center mx-2 sm:mx-7 lg:mx-20 text-lg text-white"
+            className="font-normal text-center mx-1 sm:mx-7 lg:mx-20 text-lg text-white"
             id="community"
           >
             The aim of this platform is to ease this stress and help students of

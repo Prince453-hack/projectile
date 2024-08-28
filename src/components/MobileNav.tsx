@@ -40,13 +40,13 @@ export function MobileNav() {
         </SheetHeader>
         <div className="flex flex-col mt-3 font-semibold">
           {navbarLinks.map((link) => (
-            <a
+            <Link
               href={link.route}
               key={link.label}
               className="my-3 ml-3 text-white"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </div>
         <div className="flex flex-col">

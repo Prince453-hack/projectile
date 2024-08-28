@@ -38,13 +38,13 @@ const StickyNavbar: React.FC = () => {
             </div>
             <div className="flex items-center justify-center pr-4">
               {navbarLinks.map((link) => (
-                <a
+                <Link
                   key={link.label}
                   href={link.route}
                   className="text-white mx-1 sm:mr-2 md:mr-3 xl:mr-4 hover:underline transition-all"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
 
               <div className="flex items-center justify-center mr-3 focus-visible:outline-none">
