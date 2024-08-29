@@ -1,97 +1,80 @@
 "use client";
 
-import { ArrowLeft, ArrowRight, Dot } from "lucide-react";
-import React, { useEffect, useState } from "react";
+import * as React from "react";
+import Autoplay from "embla-carousel-autoplay";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
-function Slider() {
-  const slides = [
-    {
-      url: "/Feature2.jpg",
-      type: "image",
-    },
-    {
-      url: "/image2.jpg",
-      type: "image",
-    },
-    {
-      url: "/image3.jpg",
-      type: "image",
-    },
-    {
-      url: "/video.mp4",
-      type: "video",
-    },
-  ];
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
-  const [currentIndex, setCurrentIndex] = useState(0);
+const slides = [
+  {
+    url: "/Feature2.jpg",
+    type: "image",
+  },
+  {
+    url: "/image2.jpg",
+    type: "image",
+  },
+  {
+    url: "/image3.jpg",
+    type: "image",
+  },
+  {
+    url: "/video.mp4",
+    type: "video",
+  },
+];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [currentIndex]);
-
-  const prevSlide = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
-  };
-
-  const nextSlide = () => {
-    const isLastSlide = currentIndex === slides.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
-  };
-
-  const goToSlide = (slideIndex: any) => {
-    setCurrentIndex(slideIndex);
-  };
+export default function Slider() {
+  const plugin = React.useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: false })
+  );
 
   return (
-    <div className="h-[450px] sm:h-[650px] w-full m-auto px-4 py-12 relative group mt-0 sm:mt-10">
-      <div className="w-full h-full rounded-xl bg-center bg-cover duration-500">
-        {slides[currentIndex].type === "image" ? (
-          <img
-            src={slides[currentIndex].url}
-            alt=""
-            className="w-full h-full object-cover rounded-2xl border-2 border-[#00305B] shadow-md"
-          />
-        ) : (
-          <video
-            src={slides[currentIndex].url}
-            className="w-full h-full object-cover rounded-2xl border-2 border-[#03005B] shadow-md"
-            autoPlay
-            loop
-            muted
-          />
-        )}
-      </div>
-
-      <div className="hidden ml-7 z-10 group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
-        <ArrowLeft onClick={prevSlide} size={30} />
-      </div>
-
-      <div className="hidden mr-7 z-10 group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
-        <ArrowRight onClick={nextSlide} size={30} />
-      </div>
-
-      <div className="flex top-4 justify-center py-2">
-        {slides.map((slide, slideIndex) => (
-          <div
-            key={slideIndex}
-            onClick={() => goToSlide(slideIndex)}
-            className={`text-2xl cursor-pointer ${
-              slideIndex === currentIndex ? "text-white" : "text-gray-400"
-            }`}
-          >
-            <Dot size={20} />
-          </div>
+    <Carousel
+      plugins={[plugin.current]}
+      className="w-full max-w-[92rem] mx-auto mt-5 sm:mt-16 md:mt-20 mb-[-2rem] md:mb-[-15rem] relative rounded-md"
+    >
+      <CarouselContent className="rounded-md">
+        {slides.map((slide, index) => (
+          <CarouselItem key={index} className="flex justify-center relative">
+            <div className="p-1 w-full">
+              <Card className="w-full h-[80%] md:h-[60%]">
+                <CardContent className="flex items-center justify-center w-full h-full p-0.5 dark:bg-white rounded-sm">
+                  {slide.type === "image" ? (
+                    <img
+                      src={slide.url}
+                      alt={`Slide ${index + 1}`}
+                      className="object-cover w-full h-full rounded-sm"
+                    />
+                  ) : (
+                    <video
+                      src={slide.url}
+                      autoPlay
+                      loop
+                      muted
+                      className="w-full h-full object-cover"
+                    />
+                  )}
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
         ))}
-      </div>
-    </div>
+      </CarouselContent>
+      <CarouselPrevious className="absolute top-1/3 -translate-y-1/2 left-4 bg-white bg-opacity-50 p-2 rounded-full">
+        <ChevronLeft size={23} />
+      </CarouselPrevious>
+      <CarouselNext className="absolute top-1/3 -translate-y-1/2 right-4 bg-white bg-opacity-50 p-2 rounded-full">
+        <ChevronRight size={23} />
+      </CarouselNext>
+    </Carousel>
   );
 }
-
-export default Slider;

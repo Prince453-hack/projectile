@@ -25,7 +25,7 @@ const StickyNavbar: React.FC = () => {
     <>
       <div>
         <nav
-          className={`fixed top-0 left-0 right-0 bg-[#03005B] backdrop-blur-lg text-center shadow-md transition-all duration-300 ease-in-out hidden sm:block ${
+          className={`fixed top-0 left-0 right-0 bg-[#03005B] backdrop-blur-lg text-center shadow-md transition-all duration-300 ease-in-out hidden z-50 sm:block ${
             scrolled &&
             "top-5 w-11/12 my-0 mx-auto shadow-md rounded-full transition-all z-50"
           }`}
