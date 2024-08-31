@@ -1,10 +1,9 @@
+import Contact from "@/components/Contact";
+import { ThemeProvider } from "@/components/theme-provider";
+import { cn, constructMetadata } from "@/lib/utils";
+import { ClerkProvider } from "@clerk/nextjs";
 import { Lexend } from "next/font/google";
 import "./globals.css";
-import StickyNavbar from "@/components/Navbar";
-import { ClerkProvider } from "@clerk/nextjs";
-import { cn, constructMetadata } from "@/lib/utils";
-import { ThemeProvider } from "@/components/theme-provider";
-import Contact from "@/components/Contact";
 
 const inter = Lexend({ subsets: ["latin"], weight: ["400"] });
 
