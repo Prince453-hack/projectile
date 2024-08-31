@@ -5,13 +5,17 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import React from "react";
-import { addNews, updateNews } from "./_action/news";
+
 import { useFormState, useFormStatus } from "react-dom";
 import { news } from "@prisma/client";
 import Image from "next/image";
+import { addNews, updateNews } from "../../_action/news";
 
 const NewsForm = ({ news }: { news?: news | null }) => {
-  const [error, action] = useFormState(addNews, {});
+  const [error, action] = useFormState(
+    updateNews.bind(null, news?.id || 0),
+    {}
+  );
 
   return (
     <form className="space-y-6" action={action}>
@@ -68,6 +72,9 @@ const NewsForm = ({ news }: { news?: news | null }) => {
           accept="image/*"
           required={news === null}
         />
+        {news?.image !== null && (
+          <Image src={news?.image ?? ""} alt="" height={400} width={400} />
+        )}
         {error.image && <div className="text-destructive">{error.image}</div>}
       </div>
 

@@ -1,6 +1,7 @@
 import React from "react";
-import NewsForm from "../../news-form";
+
 import db from "@/db/db";
+import NewsForm from "./news-form";
 
 const page = async ({ params: { id } }: { params: { id: string } }) => {
   const newsId = parseInt(id, 10);
