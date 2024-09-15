@@ -1,6 +1,5 @@
 "use client";
 
-import React, { useState } from "react";
 import {
   Dialog,
   DialogContent,
@@ -9,14 +8,13 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { Formik, Form, Field } from "formik";
+import { useUser } from "@clerk/nextjs";
+import { Field, Form, Formik } from "formik";
+import { useState } from "react";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
-import { useSession, useUser } from "@clerk/nextjs";
-import Link from "next/link";
 
 const Contact = () => {
-  const { session } = useSession();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const { user } = useUser();
 
@@ -47,46 +45,6 @@ const Contact = () => {
     setSubmitting(false);
   };
 
-  if (!session) {
-    return (
-      <div className="fixed bottom-3 right-3 z-50">
-        <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-          <DialogTrigger asChild>
-            <button
-              className="bg-blue-500 hover:bg-blue-600 text-white rounded-xl p-2 shadow-xl"
-              onClick={handleDialogOpen}
-            >
-              Connect Us
-            </button>
-          </DialogTrigger>
-          <DialogContent className="bg-white p-4">
-            <DialogHeader>
-              <DialogTitle className="font-semibold text-center text-black">
-                Sign Up to Connect Us
-              </DialogTitle>
-              <Link href="/sign-up">
-                <DialogDescription
-                  className="text-center text-white bg-purple-700 mt-7 rounded-md px-2 py-2 hover:bg-purple-600"
-                  onClick={handleDialogClose}
-                >
-                  Sign Up
-                </DialogDescription>
-              </Link>
-              <Link href="/sign-in" className="mt-2">
-                <DialogDescription
-                  className="text-center text-black bg-zinc-200 mt-2 rounded-md px-2 py-2 hover:bg-zinc-300"
-                  onClick={handleDialogClose}
-                >
-                  Sign In
-                </DialogDescription>
-              </Link>
-            </DialogHeader>
-          </DialogContent>
-        </Dialog>
-      </div>
-    );
-  }
-
   return (
     <div className="fixed bottom-3 right-3 z-50">
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
@@ -109,7 +67,7 @@ const Contact = () => {
           </DialogHeader>
           <Formik
             initialValues={{
-              name: user?.fullName || "Name",
+              name: user?.fullName || "",
               email: user?.emailAddresses || "",
               country: "",
               phone: user?.phoneNumbers || "",
