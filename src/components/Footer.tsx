@@ -16,6 +16,9 @@ const Footer = () => {
         </div>
       </div>
       <div className="text-white text-center pb-2">
+        <p className="text-zinc-200 mb-2">
+          RAUCH INTERNATIONAL INDIA PRIVATE LIMITED
+        </p>
         <p className="text-xs text-zinc-400">
           &copy; {new Date().getFullYear()} THESECURELEAP. All rights reserved.
         </p>
