@@ -15,3 +15,10 @@ model news {
   link        String
   source      String
 }
+
+model Stories {
+  id          Int     @id @default(autoincrement())
+  title       String
+  description String?
+  image       String
+}

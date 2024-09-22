@@ -1,4 +1,4 @@
-import AWS from "@/components/Data";
+import StoriesSection from "@/components/Data";
 import Events from "@/components/Events";
 import Footer from "@/components/Footer";
 import StickyNavbar from "@/components/Navbar";
@@ -34,7 +34,7 @@ export default function Home() {
         <h1 className="font-semibold text-3xl text-center sm:text-5xl">
           Stories
         </h1>
-        <AWS />
+        <StoriesSection />
       </div>
 
       <div className="my-2 sm:my-10" id="event">

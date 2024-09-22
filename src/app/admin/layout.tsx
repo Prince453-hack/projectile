@@ -18,10 +18,10 @@ const Links = [
     label: "News",
     href: "/admin/news",
   },
-  // {
-  //   label: "Users",
-  //   href: "/admin/users",
-  // },
+  {
+    label: "Stories",
+    href: "/admin/stories",
+  },
 ];
 
 const Layout = ({ children }: Props) => {

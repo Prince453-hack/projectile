@@ -39,10 +39,10 @@ async function fetchJsonFromS3() {
   }
 }
 
-const AWS = async () => {
+const StoriesSection = async () => {
   const data = await fetchJsonFromS3();
 
   return <Stories data={data} />;
 };
 
-export default AWS;
+export default StoriesSection;
