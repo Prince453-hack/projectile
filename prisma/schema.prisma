@@ -22,3 +22,26 @@ model Stories {
   description String?
   image       String
 }
+
+model User {
+  id         Int                @id @default(autoincrement())
+  name       String
+  email      String             @unique
+  programs   Program[]          @relation("UserPrograms")
+  incentives EmployeeIncentive?
+}
+
+model Program {
+  id          Int    @id @default(autoincrement())
+  title       String
+  description String
+  users       User[] @relation("UserPrograms")
+}
+
+model EmployeeIncentive {
+  id              Int     @id @default(autoincrement())
+  userId          Int     @unique
+  user            User    @relation(fields: [userId], references: [id])
+  eventAccess     Boolean
+  educationAccess Boolean
+}
