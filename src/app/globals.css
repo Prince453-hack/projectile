@@ -54,6 +54,10 @@ html {
   animation: moveLeft 1s infinite;
 }
 
+.gradient-bg-footer {
+  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
