@@ -19,7 +19,7 @@ export const coreMembers = [
       "Undergrad Student at Barrett's, the Honors college of Arizona State University",
     img: "/DBimg.jpg",
     detail:
-      "Devika is a sophomore at Arizona State University and Barrett, The Honors College majoring in computer science with an emphasis on cybersecurity. She has written an academic research paper on crisis management and researched mathematical models to predict drug concentration in the bloodstream. She is interested in developing reliable and cost-effective security solutions to create secure human-computer interactions.",
+      "Devika is a sophomore at Arizona State University and Barrett, The Honors College majoring in computer science with an emphasis on cybersecurity. She has written an academic research paper on crisis management and researched mathematical models to predict drug concentration in the bloodstream. She is interested in developing reliable and cost-effective security solutions to create secure human-computer interactions. She is very passionate in teaching mathematics to the foster kids.",
   },
 ];
 
