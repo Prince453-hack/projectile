@@ -1,5 +1,9 @@
 export const navbarLinks = [
   {
+    label: "Project Ayanna",
+    route: "/project-ayanna",
+  },
+  {
     label: "Community",
     route: "#community",
   },
@@ -8,11 +12,7 @@ export const navbarLinks = [
     route: "/articles",
   },
   {
-    label: "Events",
-    route: "#event",
+    label: "Pricing",
+    route: "/pricing",
   },
-  // {
-  //   label: "News",
-  //   route: "/news",
-  // },
 ];
