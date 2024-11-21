@@ -11,8 +11,8 @@ export const navbarLinks = [
     label: "Articles",
     route: "/articles",
   },
-  {
-    label: "Pricing",
-    route: "/pricing",
-  },
+  // {
+  //   label: "Pricing",
+  //   route: "/pricing",
+  // },
 ];
