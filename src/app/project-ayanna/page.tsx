@@ -79,7 +79,10 @@ const ProjectAyanna = () => {
 
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-7">
           {projectAyannaMembers.map(({ name, country, college, details }) => (
-            <Card className="border-none shadow-none bg-zinc-100/45 h-56 relative">
+            <Card
+              className="border-none shadow-none bg-zinc-100/45 h-56 relative"
+              key={name}
+            >
               <CardHeader className="flex flex-row items-center space-x-1">
                 <p className="font-medium capitalize text-lg">{name}</p>
               </CardHeader>
