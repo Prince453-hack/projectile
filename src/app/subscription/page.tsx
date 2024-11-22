@@ -48,7 +48,7 @@ export default function PricingSection() {
           </h1>
           {pricing.map(({ name, href, color, border }) => (
             <CardContainer
-              className="border-none shadow-none mt-[-20px]"
+              className="border-none shadow-none mt-[-90px] md:mt-[-20px]"
               key={name}
             >
               <div
