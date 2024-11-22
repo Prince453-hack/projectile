@@ -71,10 +71,10 @@ const ProjectAyanna = () => {
 
       <div className="mt-10">
         <div className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0">
-          <div className="border border-black w-full sm:my-1" />
-          <h1 className="font-semibold text-2xl sm:text-4xl max-w-[250px] sm:max-w-[200px] text-right sm:text-right">
+          <h1 className="font-semibold text-2xl sm:text-4xl max-w-[250px] sm:max-w-[200px] text-center sm:text-left">
             Our Students
           </h1>
+          <div className="border border-black w-full sm:my-1" />
         </div>
 
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-7">
