@@ -7,10 +7,9 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
+import { Menu, Plus } from "lucide-react";
 import Link from "next/link";
 import { navbarLinks } from "../../constant";
-import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 
 export function MobileNav() {
   return (
@@ -49,37 +48,14 @@ export function MobileNav() {
             </Link>
           ))}
         </div>
-        <div className="flex flex-col">
-          <div className="absolute bottom-1 left-2 ml-5 mb-2">
-            <SignedIn>
-              <UserButton
-                afterSignOutUrl="/"
-                appearance={{
-                  elements: {
-                    avatarBox: "h-10 w-10",
-                    userButtonBox: "flex items-center",
-                  },
-                  variables: {
-                    colorPrimary: "#1D24CA",
-                  },
-                }}
-              />
-            </SignedIn>
+        <div className="flex flex-col ml-3 mt-2 font-semibold">
+          <h1 className="text-white">Events</h1>
+          <div className="flex items-center text-white mt-2 ml-1">
+            <Plus className="size-4 mr-1" />
+            <Link href="/project-ayanna">
+              <p>Project Ayanna</p>
+            </Link>
           </div>
-          <SignedOut>
-            <Link
-              href="/sign-in"
-              className="px-2 py-2 border-2 border-yellow-400 rounded-lg text-yellow-400 ml-2 my-3 text-center"
-            >
-              Sign In
-            </Link>
-            <Link
-              href="/sign-up"
-              className="text-black bg-yellow-400 px-2.5 py-2.5 rounded-lg ml-2 text-center"
-            >
-              Sign Up
-            </Link>
-          </SignedOut>
         </div>
       </SheetContent>
     </Sheet>
