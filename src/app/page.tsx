@@ -9,7 +9,7 @@ import TeamMembers from "@/components/TeamMembers";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="select-none">
       <StickyNavbar />
       <Slider />
 
@@ -37,12 +37,12 @@ export default function Home() {
         <StoriesSection />
       </div>
 
-      <div className="my-2 sm:my-10" id="event">
+      {/* <div className="my-2 sm:my-10" id="event">
         <h1 className="font-semibold text-3xl sm:text-4xl text-center mt-20 md:mt-28">
           Events
         </h1>
         <Events />
-      </div>
+      </div> */}
 
       <TeamMembers />
 

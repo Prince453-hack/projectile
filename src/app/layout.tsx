@@ -1,5 +1,4 @@
 import Contact from "@/components/Contact";
-import { ThemeProvider } from "@/components/theme-provider";
 import { cn, constructMetadata } from "@/lib/utils";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Lexend } from "next/font/google";
@@ -26,15 +25,8 @@ export default function RootLayout({
             inter.className
           )}
         >
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            {children}
-            <Contact />
-          </ThemeProvider>
+          {children}
+          <Contact />
         </body>
       </html>
     </ClerkProvider>

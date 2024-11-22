@@ -1,9 +1,5 @@
 export const navbarLinks = [
   {
-    label: "Project Ayanna",
-    route: "/project-ayanna",
-  },
-  {
     label: "Community",
     route: "#community",
   },
@@ -12,7 +8,7 @@ export const navbarLinks = [
     route: "/articles",
   },
   {
-    label: "Pricing",
-    route: "/pricing",
+    label: "Subscription",
+    route: "/subscription",
   },
 ];
