@@ -58,9 +58,11 @@ const StickyNavbar: React.FC = () => {
                   </h1>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="start">
-                  <DropdownMenuLabel className="cursor-pointer">
-                    <Link href="/project-ayanna">Project Ayanna</Link>
-                  </DropdownMenuLabel>
+                  <Link href="/project-ayanna">
+                    <DropdownMenuLabel className="cursor-pointer">
+                      Project Ayanna
+                    </DropdownMenuLabel>
+                  </Link>
                 </DropdownMenuContent>
               </DropdownMenu>
             </div>
