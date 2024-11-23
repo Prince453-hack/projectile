@@ -17,16 +17,16 @@ html {
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 3px;
+  height: 3px;
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: #000;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #03005bb1;
+  background: #fefefeb1;
   border-radius: 2px;
 }
 
