@@ -45,7 +45,7 @@ const StickyNavbar: React.FC = () => {
                 <Link
                   key={link.label}
                   href={link.route}
-                  className="text-white mx-1 sm:mr-2 md:mr-3 xl:mr-4 hover:underline transition-all"
+                  className="text-white mx-1 sm:mr-2 md:mr-3 xl:mr-4 hover:underline hover:underline-offset-4 transition-all"
                 >
                   {link.label}
                 </Link>
@@ -53,7 +53,7 @@ const StickyNavbar: React.FC = () => {
 
               <DropdownMenu modal={false}>
                 <DropdownMenuTrigger asChild>
-                  <h1 className="text-white mx-1 sm:mr-2 md:mr-3 xl:mr-4 hover:underline transition-all cursor-pointer">
+                  <h1 className="text-white mx-1 sm:mr-2 md:mr-3 xl:mr-4 hover:underline hover:underline-offset-4 transition-all cursor-pointer">
                     Projects
                   </h1>
                 </DropdownMenuTrigger>

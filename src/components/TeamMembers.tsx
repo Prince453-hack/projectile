@@ -3,7 +3,7 @@ import { contributingMembers, coreMembers } from "../../constant/teamMembers";
 
 const TeamMembers = () => {
   return (
-    <div>
+    <div id="teams">
       <div className="mt-28">
         <h1 className="font-semibold text-3xl text-center sm:text-5xl underline underline-offset-8 mb-2 sm:mb-7">
           OUR TEAM
