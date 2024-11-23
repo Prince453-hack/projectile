@@ -45,12 +45,4 @@ export const contributingMembers = [
     detail:
       "Rachael is beginning her Freshman Year in NJIT to pursue an engineering major. She graduated from Manchester Twp, New Jersey. She is the president of the National Honors Society and executive publicist of the student government at her school. Rachael is interested in learning about technological innovations and enjoys making some of her own by deconstructing electronics. As a member of The Secure Leap, she wants to help students understand and ease decision-making when it comes to their college majors.",
   },
-  {
-    name: "Pooja Pillai",
-    profession:
-      "A high School Senior at Lincoln Preparatory Academy, Chandler, AZ",
-    img: "/PPimg.jpg",
-    detail:
-      "Want to graduate in Computer Engineering as I believe that technology can potentially solve the global future problems. Passionate to contribute in power and health care sector with the knowledge acquired. She is very passionate in teaching mathematics to the foster kids.",
-  },
 ];

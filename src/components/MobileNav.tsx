@@ -49,7 +49,7 @@ export function MobileNav() {
           ))}
         </div>
         <div className="flex flex-col ml-3 mt-2 font-semibold">
-          <h1 className="text-white">Events</h1>
+          <h1 className="text-white">Projects</h1>
           <div className="flex items-center text-white mt-2 ml-1">
             <Plus className="size-4 mr-1" />
             <Link href="/project-ayanna">

@@ -29,7 +29,7 @@ export default function PricingSection() {
           />
         </Link>
         <div className="h-8 border border-1 w-0 border-white" />
-        <h1 className="text-xl font-semibold text-white">TSL Subscription</h1>
+        <h1 className="text-xl font-semibold text-white">Subscription Plans</h1>
       </div>
       <div className="container mx-auto px-4">
         <h2 className="text-5xl font-extrabold text-center mb-6 text-white">
@@ -62,10 +62,10 @@ export default function PricingSection() {
                 <CardBody className="mt-5 ml-5">
                   <CardItem
                     translateZ="50"
-                    className="text-2xl border text-white rounded-xl px-3 py-1 font-semibold"
+                    className="text-2xl border text-black rounded-xl px-3 py-1 font-semibold"
                     style={{
                       borderColor: `${border}`,
-                      backgroundColor: `${color}`,
+                      backgroundColor: `${border}`,
                     }}
                   >
                     {name}

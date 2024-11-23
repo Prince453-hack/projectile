@@ -54,7 +54,7 @@ const StickyNavbar: React.FC = () => {
               <DropdownMenu modal={false}>
                 <DropdownMenuTrigger asChild>
                   <h1 className="text-white mx-1 sm:mr-2 md:mr-3 xl:mr-4 hover:underline transition-all cursor-pointer">
-                    Events
+                    Projects
                   </h1>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="start">
