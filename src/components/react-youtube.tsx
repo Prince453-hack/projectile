@@ -3,7 +3,7 @@ import YouTube from "react-youtube";
 
 const ReactYoutube = () => {
   const videoUrl = "https://www.youtube.com/watch?v=WHcz1N0gOfM";
-  const videoId = new URL(videoUrl).searchParams.get("v");
+  const videoId = new URL(videoUrl).searchParams.get("v") || "";
 
   const opts = {
     playerVars: {
