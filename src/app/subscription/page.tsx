@@ -1,21 +1,12 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-} from "@/components/ui/card";
 
+import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { Gem } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { pricing, pricingFeatures } from "../../../constant/pricing";
-import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
-
-const pricingColor = [];
 
 export default function PricingSection() {
   return (
