@@ -23,6 +23,10 @@ const slides = [
     type: "image",
   },
   {
+    url: "/project-ayanna.jpg",
+    type: "image",
+  },
+  {
     url: "/image3.jpg",
     type: "image",
   },
