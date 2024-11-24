@@ -80,6 +80,6 @@ export const projectAyannaMembers = [
     college: " Lincoln Preparatory Academy, Chandler, AZ",
     country: "USA",
     details:
-      "Developed innovative methods to teach Mathematics for the under previleged children. ",
+      "Developed innovative methods to teach programming for the under previleged children. ",
   },
 ];
