@@ -94,7 +94,7 @@ const ProjectAyanna = () => {
                   <CardDescription className="text-gray-400">
                     {details}
                   </CardDescription>
-                  <CardFooter className="absolute bottom-1 right-1">
+                  <CardFooter className="absolute bottom-0 right-1">
                     <h1 className="text-sm">{college}</h1>
                   </CardFooter>
                 </CardContent>

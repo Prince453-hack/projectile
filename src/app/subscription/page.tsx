@@ -33,10 +33,7 @@ export default function PricingSection() {
           solutions for various client needs, from individual students to
           professionals and larger organizations
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 relative">
-          <h1 className="absolute top-[-60px] lg:top-[-105px] left-1/2 transform -translate-x-1/2 text-[8rem] lg:text-[12rem] bg-transparent font-bold text-white px-4 z-[-10] hidden lg:block">
-            Subscriptions
-          </h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {pricing.map(({ name, href, color, border }) => (
             <CardContainer
               className="border-none shadow-none mt-[-90px] md:mt-[-20px]"
