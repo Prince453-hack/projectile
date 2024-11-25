@@ -80,13 +80,13 @@ const ProjectAyanna = () => {
           </div>
 
           <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-7">
-            {projectAyannaMembers.map(({ name, country, college, details }) => (
+            {projectAyannaMembers.map(({ name, college, details }) => (
               <Card
-                className="border-none shadow-none h-56 relative bg-gradient-to-t from-[#000] to-[#1A1A1D] text-white rounded-2xl"
+                className="border-none shadow-none h-60 relative bg-gradient-to-t from-[#000] to-[#1A1A1D] text-white rounded-2xl"
                 key={name}
               >
                 <CardHeader className="flex flex-row items-center space-x-1">
-                  <CardTitle className="font-medium capitalize text-lg">
+                  <CardTitle className="font-medium capitalize text-lg mb-[-22px]">
                     {name}
                   </CardTitle>
                 </CardHeader>
@@ -94,7 +94,7 @@ const ProjectAyanna = () => {
                   <CardDescription className="text-gray-400">
                     {details}
                   </CardDescription>
-                  <CardFooter className="absolute bottom-0 right-1">
+                  <CardFooter className="absolute bottom-[-5px] right-1">
                     <h1 className="text-sm">{college}</h1>
                   </CardFooter>
                 </CardContent>

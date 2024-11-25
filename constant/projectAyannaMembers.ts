@@ -80,6 +80,6 @@ export const projectAyannaMembers = [
     college: "Lincoln Preparatory Academy, Chandler, AZ",
     country: "USA",
     details:
-      "Want to graduate in Computer Engineering as I believe that technology can potentially solve the global future problems. Passionate to contribute in power and health care sector with the knowledge acquired.",
+      "Wishes to graduate in Computer engineering as she believes that technology can potentially solve the global future problems. She is also passionate to contribute in power and health care sector with the knowledge acquired. She has developed innovative methods to teach programming for the underprivileged children.",
   },
 ];
