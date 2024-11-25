@@ -80,9 +80,12 @@ const ProjectAyanna = () => {
           </div>
 
           <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-7">
-            {projectAyannaMembers.map(({ name, college, details }) => (
+            {projectAyannaMembers.map(({ name, college, details }, index) => (
               <Card
-                className="border-none shadow-none h-60 relative bg-gradient-to-t from-[#000] to-[#1A1A1D] text-white rounded-2xl"
+                className={cn(
+                  "border-none shadow-none relative bg-gradient-to-t from-[#000] to-[#1A1A1D] text-white rounded-2xl",
+                  index === projectAyannaMembers.length - 1 ? "h-64" : "h-60"
+                )}
                 key={name}
               >
                 <CardHeader className="flex flex-row items-center space-x-1">
