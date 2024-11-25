@@ -77,9 +77,9 @@ export const projectAyannaMembers = [
   },
   {
     name: "Pooja Pillai",
-    college: " Lincoln Preparatory Academy, Chandler, AZ",
+    college: "Lincoln Preparatory Academy, Chandler, AZ",
     country: "USA",
     details:
-      "Developed innovative methods to teach programming for the under previleged children. ",
+      "Want to graduate in Computer Engineering as I believe that technology can potentially solve the global future problems. Passionate to contribute in power and health care sector with the knowledge acquired.",
   },
 ];
