@@ -34,7 +34,7 @@ export default function PricingSection() {
           professionals and larger organizations
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {pricing.map(({ name, href, color, border }) => (
+          {pricing.map(({ name, href, color, border, detailsPage }) => (
             <CardContainer
               className="border-none shadow-none mt-[-90px] md:mt-[-20px]"
               key={name}
@@ -67,6 +67,22 @@ export default function PricingSection() {
                       <h1>{name}</h1>
                     </CardItem>
                   ))}
+                  <CardItem className="my-0.5 mx-auto">
+                    {detailsPage === "" ? (
+                      <h1 className="text-gray-400 mx-auto text-lg">
+                        Read More
+                      </h1>
+                    ) : (
+                      <Link
+                        href={detailsPage}
+                        target="_blank"
+                        className="text-white mx-auto text-lg hover:underline hover:underline-offset-4"
+                      >
+                        Read More
+                      </Link>
+                    )}
+                  </CardItem>
+
                   <CardItem className="mx-auto mt-6">
                     {href === "" ? (
                       <Button disabled variant="secondary" size="lg">
