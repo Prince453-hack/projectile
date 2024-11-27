@@ -37,7 +37,11 @@ const StickyNavbar: React.FC = () => {
           <div className="flex items-center justify-center space-x-4">
             <div className="flex-1">
               <a href="#">
-                <img src="/main-logo.jpg" className="h-[70px] w-[140px] mx-8" />
+                <img
+                  src="/main-logo.jpg"
+                  className="h-[70px] w-[140px] mx-8"
+                  alt="logo"
+                />
               </a>
             </div>
             <div className="flex items-center justify-center pr-4">

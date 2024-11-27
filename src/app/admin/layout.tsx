@@ -34,7 +34,7 @@ const Layout = ({ children }: Props) => {
           <div className="px-5 py-2 flex flex-col space-y-6">
             <Image
               src="/main-logo-removebg.png"
-              alt=""
+              alt="Logo"
               className="w-full h-[70%] mb-10"
               width={300}
               height={300}

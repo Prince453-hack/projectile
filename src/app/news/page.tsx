@@ -12,7 +12,11 @@ const page = async () => {
     <div className="min-h-screen p-10">
       <div className="flex items-center space-x-4">
         <Link href="/">
-          <img src="/main-logo-crop.png" className="h-[40px] w-[300px]" />
+          <img
+            src="/main-logo-crop.png"
+            className="h-[40px] w-[300px]"
+            alt="Logo"
+          />
         </Link>
         <div className="h-10 border-2 w-0 border-black" />
         <h1 className="text-2xl font-semibold">TSL News</h1>

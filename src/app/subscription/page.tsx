@@ -17,6 +17,7 @@ export default function PricingSection() {
             src="/main-logo-crop.png"
             className="h-[25px] w-[150px]"
             draggable="false"
+            alt="Logo"
           />
         </Link>
         <div className="h-8 border border-1 w-0 border-white" />

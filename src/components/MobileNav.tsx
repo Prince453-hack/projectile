@@ -17,7 +17,11 @@ export function MobileNav() {
       <nav className="w-full bg-[#03005B] flex items-center justify-center px-3 sm:hidden">
         <div className="flex-1">
           <Link href="/">
-            <img src="/main-logo.jpg" className="object-cover h-[50px] ml-3" />
+            <img
+              src="/main-logo.jpg"
+              className="object-cover h-[50px] ml-3"
+              alt="Logo"
+            />
           </Link>
         </div>
         <SheetTrigger asChild>
@@ -32,6 +36,7 @@ export function MobileNav() {
                 <img
                   src="/main-logo.jpg"
                   className="object-cover h-[80px] w-[160px]"
+                  alt="Logo"
                 />
               </Link>
             </nav>
