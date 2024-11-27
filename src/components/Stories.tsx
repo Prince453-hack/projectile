@@ -24,6 +24,7 @@ const Stories = ({ data }: { data: any }) => {
               alt={item.title}
               title={item.title}
               className="object-cover w-full h-full transition-all duration-500 ease-[cubic-bezier(0.05,0.61,0.41,0.95)]"
+              loading="lazy"
             />
             <span
               className={`absolute left-2 top-2 bg-black text-white text-sm md:text-md px-2 py-1 rounded-md md:rounded-full transition-all duration-500 ease-[cubic-bezier(0.05,0.61,0.41,0.95)] ${

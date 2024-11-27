@@ -30,6 +30,7 @@ const TeamMembers = () => {
                   )}
                   src={img}
                   alt="Profile"
+                  loading="lazy"
                 />
               </div>
               <div className="pt-16 pb-6 px-6 mb-20">
@@ -62,6 +63,7 @@ const TeamMembers = () => {
                   className="w-24 h-24 rounded-full border-2 border-gray-300 object-cover"
                   src={img}
                   alt="Profile"
+                  loading="lazy"
                 />
               </div>
               <div className="pt-16 pb-6 px-6 mb-20">
