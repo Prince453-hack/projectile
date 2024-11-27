@@ -15,23 +15,23 @@ import {
 
 const slides = [
   {
-    url: "/Feature2.jpg",
+    url: "/sliderImage/Feature2.jpg",
     type: "image",
   },
   {
-    url: "/image2.jpg",
+    url: "/sliderImage/image2.jpg",
     type: "image",
   },
   {
-    url: "/project-ayanna.jpg",
+    url: "/sliderImage/project-ayanna.jpg",
     type: "image",
   },
   {
-    url: "/image3.jpg",
+    url: "/sliderImage/image3.jpg",
     type: "image",
   },
   {
-    url: "/video.mp4",
+    url: "/sliderImage/video.mp4",
     type: "video",
   },
 ];
@@ -57,6 +57,7 @@ export default function Slider() {
                       src={slide.url}
                       alt={`Slide ${index + 1}`}
                       className="object-cover w-full h-full rounded-sm"
+                      loading="lazy"
                     />
                   ) : (
                     <video
