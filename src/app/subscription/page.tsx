@@ -70,7 +70,7 @@ export default function PricingSection() {
                   <CardItem className="my-0.5 mx-auto">
                     {detailsPage === "" ? (
                       <h1 className="text-gray-400 mx-auto text-lg">
-                        Read More
+                        Subscription Details
                       </h1>
                     ) : (
                       <Link
@@ -78,7 +78,7 @@ export default function PricingSection() {
                         target="_blank"
                         className="text-white mx-auto text-lg hover:underline hover:underline-offset-4"
                       >
-                        Read More
+                        Subscription Details
                       </Link>
                     )}
                   </CardItem>
