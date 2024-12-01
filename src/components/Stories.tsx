@@ -18,7 +18,7 @@ const Stories = ({ data }: StoriesProps) => {
   return (
     <div className="grid place-items-center mt-6 mb-12 w-full overflow-hidden">
       <div className="flex lg:flex-row flex-col gap-4 max-w-[90rem] sm:max-w-7xl w-full mx-auto px-4 overflow-hidden">
-        {data.map((item: any, index: number) => (
+        {data.map((item, index: number) => (
           <div
             key={index}
             className={`relative overflow-hidden rounded-lg transition-all duration-500 ease-[cubic-bezier(0.05,0.61,0.41,0.95)] ${
@@ -26,7 +26,9 @@ const Stories = ({ data }: StoriesProps) => {
                 ? "w-full lg:w-full lg:h-96 h-[500px] sm:h-60"
                 : "lg:w-16 w-full lg:h-96 h-14 sm:h-16"
             } cursor-pointer`}
-            onClick={() => setActiveIndex(index)}
+            onClick={() => {
+              setTimeout(() => setActiveIndex(index), 100);
+            }}
           >
             <img
               src={item.image}
@@ -44,15 +46,15 @@ const Stories = ({ data }: StoriesProps) => {
                 {item.title}
               </span>
             )}
-            (item.data && (
-            <span
-              className={`absolute left-2 top-14 mt-0 md:mt-2 backdrop-blur-md rounded-md text-white text-sm lg:text-lg p-2 transition-all duration-500 ease-[cubic-bezier(0.05,0.61,0.41,0.95)] ${
-                activeIndex === index ? "scale-100 delay-300" : "scale-0"
-              }`}
-            >
-              {item.data}
-            </span>
-            ))
+            {item.data && (
+              <span
+                className={`absolute left-2 top-14 mt-0 md:mt-2 backdrop-blur-md rounded-md text-white text-sm lg:text-lg p-2 transition-all duration-500 ease-[cubic-bezier(0.05,0.61,0.41,0.95)] ${
+                  activeIndex === index ? "scale-100 delay-300" : "scale-0"
+                }`}
+              >
+                {item.data}
+              </span>
+            )}
           </div>
         ))}
       </div>

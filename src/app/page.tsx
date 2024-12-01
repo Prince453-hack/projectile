@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import StickyNavbar from "@/components/Navbar";
 import NewSection from "@/components/NewSection";
 import Points from "@/components/Points";
+import ProjectAyanna from "@/components/Project-Ayanna";
 import Slider from "@/components/Slider";
 import TeamMembers from "@/components/TeamMembers";
 
@@ -37,13 +38,7 @@ export default function Home() {
         <StoriesSection />
       </div>
 
-      {/* <div className="my-2 sm:my-10" id="event">
-        <h1 className="font-semibold text-3xl sm:text-4xl text-center mt-20 md:mt-28">
-          Events
-        </h1>
-        <Events />
-      </div> */}
-
+      <ProjectAyanna />
       <TeamMembers />
 
       <Footer />
