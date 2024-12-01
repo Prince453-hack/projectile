@@ -23,7 +23,7 @@ const Stories = ({ data }: StoriesProps) => {
             key={index}
             className={`relative overflow-hidden rounded-lg transition-all duration-500 ease-[cubic-bezier(0.05,0.61,0.41,0.95)] ${
               activeIndex === index
-                ? "w-full lg:w-full lg:h-96 h-[500px] sm:h-60"
+                ? "w-full lg:w-full lg:h-96 h-[500px] sm:h-60 drop-shadow-md"
                 : "lg:w-16 w-full lg:h-96 h-14 sm:h-16"
             } cursor-pointer`}
             onClick={() => {
