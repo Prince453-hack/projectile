@@ -10,6 +10,7 @@ export function constructMetadata({
   description = "Global education era with diverse opportunities and challenges.",
   image = "/fav/thumbnail.jpg",
   icons = "/fav/favicon.ico",
+  noIndex = false,
 }: {
   title?: string;
   description?: string;
@@ -17,7 +18,10 @@ export function constructMetadata({
   icons?: string;
   noIndex?: boolean;
 } = {}) {
+  const metadataBase = new URL(process.env.BASE_URL || "http://localhost:3000");
+
   return {
+    metadataBase,
     title,
     description,
     openGraph: {
@@ -25,11 +29,10 @@ export function constructMetadata({
       description,
       images: [
         {
-          url: image,
+          url: new URL(image, metadataBase).toString(),
         },
       ],
     },
-
-    icons,
+    icons: new URL(icons, metadataBase).toString(),
   };
 }
