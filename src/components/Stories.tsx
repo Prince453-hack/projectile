@@ -1,9 +1,18 @@
 "use client";
-/* eslint-disable no-use-before-define */
 
 import React, { useState } from "react";
 
-const Stories = ({ data }: { data: any }) => {
+type DataProps = {
+  image: string;
+  title: string;
+  data: string;
+};
+
+interface StoriesProps {
+  data: DataProps[];
+}
+
+const Stories = ({ data }: StoriesProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
@@ -21,19 +30,21 @@ const Stories = ({ data }: { data: any }) => {
           >
             <img
               src={item.image}
-              alt={item.title}
-              title={item.title}
+              alt={item.title || ""}
+              title={item.title || ""}
               className="object-cover w-full h-full transition-all duration-500 ease-[cubic-bezier(0.05,0.61,0.41,0.95)]"
               loading="lazy"
             />
-            <span
-              className={`absolute left-2 top-2 bg-black text-white text-sm md:text-md px-2 py-1 rounded-md md:rounded-full transition-all duration-500 ease-[cubic-bezier(0.05,0.61,0.41,0.95)] ${
-                activeIndex === index ? "scale-100 delay-300" : "scale-0"
-              }`}
-            >
-              {item.title}
-            </span>
-
+            {item.title && (
+              <span
+                className={`absolute left-2 top-2 bg-black text-white text-sm md:text-md px-2 py-1 rounded-md md:rounded-full transition-all duration-500 ease-[cubic-bezier(0.05,0.61,0.41,0.95)] ${
+                  activeIndex === index ? "scale-100 delay-300" : "scale-0"
+                }`}
+              >
+                {item.title}
+              </span>
+            )}
+            (item.data && (
             <span
               className={`absolute left-2 top-14 mt-0 md:mt-2 backdrop-blur-md rounded-md text-white text-sm lg:text-lg p-2 transition-all duration-500 ease-[cubic-bezier(0.05,0.61,0.41,0.95)] ${
                 activeIndex === index ? "scale-100 delay-300" : "scale-0"
@@ -41,6 +52,7 @@ const Stories = ({ data }: { data: any }) => {
             >
               {item.data}
             </span>
+            ))
           </div>
         ))}
       </div>

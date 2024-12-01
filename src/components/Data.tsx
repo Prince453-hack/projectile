@@ -10,7 +10,13 @@ const s3 = new S3Client({
   },
 });
 
-async function fetchJsonFromS3() {
+type DataProps = {
+  image: string;
+  title: string;
+  data: string;
+};
+
+async function fetchJsonFromS3(): Promise<DataProps[]> {
   const bucketName = "articledata0430";
   const key = "data.json";
 
@@ -32,7 +38,7 @@ async function fetchJsonFromS3() {
 
     const jsonContent = await streamToString(response.Body as Readable);
 
-    return JSON.parse(jsonContent);
+    return JSON.parse(jsonContent) as DataProps[];
   } catch (error) {
     console.error("Error fetching JSON from S3:", error);
     throw new Error("Error fetching JSON from S3");
