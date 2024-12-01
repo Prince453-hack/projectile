@@ -27,7 +27,7 @@ const Stories = ({ data }: StoriesProps) => {
                 : "lg:w-16 w-full lg:h-96 h-14 sm:h-16"
             } cursor-pointer`}
             onClick={() => {
-              setTimeout(() => setActiveIndex(index), 100);
+              setTimeout(() => setActiveIndex(index), 50);
             }}
           >
             <img
