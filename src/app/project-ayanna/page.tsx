@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import ReactYoutube from "@/components/react-youtube";
 import {
   Card,
   CardContent,
@@ -11,13 +11,13 @@ import {
 } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import React from "react";
+import { useEffect } from "react";
 import { projectAyannaMembers } from "../../../constant/projectAyannaMembers";
-import ReactYoutube from "@/components/react-youtube";
 
 const ProjectAyanna = () => {
-  const pathname = usePathname();
+  useEffect(() => {
+    document.title = "Project Ayanna | The Secureleap";
+  }, []);
 
   return (
     <div className="min-h-screen p-3 px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)] select-none">

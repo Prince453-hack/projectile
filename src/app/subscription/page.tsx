@@ -7,8 +7,13 @@ import { Gem } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { pricing, pricingFeatures } from "../../../constant/pricing";
+import { useEffect } from "react";
 
 export default function PricingSection() {
+  useEffect(() => {
+    document.title = "Subscription Plans | The Secureleap";
+  }, []);
+
   return (
     <section className="min-h-fit absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)] select-none">
       <div className="flex items-center space-x-4 mb-20 mt-[-40px]">
