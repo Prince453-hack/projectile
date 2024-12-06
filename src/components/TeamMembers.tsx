@@ -1,6 +1,7 @@
 import React from "react";
 import { contributingMembers, coreMembers } from "../../constant/teamMembers";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 const TeamMembers = () => {
   return (
@@ -23,7 +24,7 @@ const TeamMembers = () => {
               key={name}
             >
               <div className="absolute inset-x-0 top-[-48px] flex justify-center">
-                <img
+                <Image
                   className={cn(
                     "w-24 h-24 rounded-full border-2 border-gray-300",
                     index === 2 ? "object-fill" : "object-cover"
@@ -32,6 +33,8 @@ const TeamMembers = () => {
                   alt="Profile"
                   loading="lazy"
                   draggable="false"
+                  width={100}
+                  height={100}
                 />
               </div>
               <div className="pt-16 pb-6 px-6 mb-20">
@@ -60,12 +63,14 @@ const TeamMembers = () => {
               key={name}
             >
               <div className="absolute inset-x-0 top-[-48px] flex justify-center">
-                <img
+                <Image
                   className="w-24 h-24 rounded-full border-2 border-gray-300 object-cover"
                   src={img}
                   alt="Profile"
                   loading="lazy"
                   draggable="false"
+                  width={100}
+                  height={100}
                 />
               </div>
               <div className="pt-16 pb-6 px-6 mb-20">

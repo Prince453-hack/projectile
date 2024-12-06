@@ -18,11 +18,12 @@ export default function PricingSection() {
     <section className="min-h-fit absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)] select-none">
       <div className="flex items-center space-x-4 mb-20 mt-[-40px]">
         <Link href="/">
-          <img
+          <Image
             src="/main-logo-crop.png"
-            className="h-[25px] w-[150px]"
             draggable="false"
             alt="Logo"
+            width={150}
+            height={25}
           />
         </Link>
         <div className="h-8 border border-1 w-0 border-white" />

@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Stories from "./Stories";
+import Image from "next/image";
 
 const ProjectAyannaData = [
   {
@@ -51,12 +52,14 @@ const ProjectAyanna = () => {
                   setTimeout(() => setActiveIndex(index), 50);
                 }}
               >
-                <img
+                <Image
                   src={item.image}
                   alt={item.title || ""}
                   title={item.title || ""}
                   className="object-cover w-full h-full transition-transform duration-500 ease-[cubic-bezier(0.05,0.61,0.41,0.95)]"
                   loading="lazy"
+                  width={1920}
+                  height={1080}
                 />
                 {item.title && (
                   <span

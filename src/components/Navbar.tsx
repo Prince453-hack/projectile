@@ -10,6 +10,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
+import Image from "next/image";
 const StickyNavbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
 
@@ -37,10 +38,12 @@ const StickyNavbar: React.FC = () => {
           <div className="flex items-center justify-center space-x-4">
             <div className="flex-1">
               <a href="#">
-                <img
+                <Image
                   src="/main-logo.jpg"
                   className="h-[70px] w-[140px] mx-8"
                   alt="logo"
+                  width={140}
+                  height={70}
                 />
               </a>
             </div>

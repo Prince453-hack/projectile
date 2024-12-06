@@ -12,6 +12,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Image from "next/image";
 
 const slides = [
   {
@@ -53,11 +54,13 @@ export default function Slider() {
               <Card className="w-full h-[80%] md:h-[60%]">
                 <CardContent className="flex items-center justify-center w-full h-full p-0.5 dark:bg-white rounded-sm">
                   {slide.type === "image" ? (
-                    <img
+                    <Image
                       src={slide.url}
                       alt={`Slide ${index + 1}`}
                       className="object-cover w-full h-full rounded-sm"
                       loading="lazy"
+                      width={1920}
+                      height={1080}
                     />
                   ) : (
                     <video

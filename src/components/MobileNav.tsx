@@ -10,6 +10,7 @@ import {
 import { Menu, Plus } from "lucide-react";
 import Link from "next/link";
 import { navbarLinks } from "../../constant";
+import Image from "next/image";
 
 export function MobileNav() {
   return (
@@ -17,10 +18,12 @@ export function MobileNav() {
       <nav className="w-full bg-[#03005B] flex items-center justify-center px-3 sm:hidden">
         <div className="flex-1">
           <Link href="/">
-            <img
+            <Image
               src="/main-logo.jpg"
               className="object-cover h-[50px] ml-3"
               alt="Logo"
+              width={120}
+              height={50}
             />
           </Link>
         </div>
@@ -33,10 +36,12 @@ export function MobileNav() {
           <SheetTitle>
             <nav className="mt-5 rounded-lg">
               <Link href="/">
-                <img
+                <Image
                   src="/main-logo.jpg"
                   className="object-cover h-[80px] w-[160px]"
                   alt="Logo"
+                  width={160}
+                  height={80}
                 />
               </Link>
             </nav>
