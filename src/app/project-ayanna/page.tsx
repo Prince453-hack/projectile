@@ -87,7 +87,7 @@ const ProjectAyanna = () => {
               <Card
                 className={cn(
                   "border-none shadow-none relative bg-gradient-to-t from-[#000] to-[#1A1A1D] text-white rounded-2xl",
-                  "h-[300px]"
+                  "h-[310px]"
                 )}
                 key={name}
               >
