@@ -50,7 +50,7 @@ export const projectAyannaMembers = [
       "Working professional in the US, Pursued a master’s in Mechanical engineering from Arizona State University.",
     country: "India",
     details:
-      "An Aeronautical Engg who helped with a social cause and developed a working drone model to promote education in remote villages of India. He has also co-authored two research papers - 1) Development of Solar Sail for Interstellar Exploration in Sustainable Aviation, Springer Nature Journal which is published 2) Configuration Selection and Analysis of a Superstructure Solar Sail in Information Technology in Industry which was published.",
+      "An Aeronautical Engineer who helped with a social cause and developed a working drone model to promote education in remote villages of India. He has also co-authored two research papers - 1) Development of Solar Sail for Interstellar Exploration in Sustainable Aviation, Springer Nature Journal which is published 2) Configuration Selection and Analysis of a Superstructure Solar Sail in Information Technology in Industry which was published.",
   },
   {
     name: "Shreeya Rokade",
