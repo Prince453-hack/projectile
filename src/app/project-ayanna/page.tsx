@@ -77,7 +77,7 @@ const ProjectAyanna = () => {
         <div className="mt-10">
           <div className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0">
             <h1 className="font-semibold text-2xl sm:text-4xl max-w-[250px] sm:max-w-[200px] text-center sm:text-left text-white">
-              Our Star Performers
+              Our Star Contributers
             </h1>
             <div className="border border-gray-50 w-full sm:my-1" />
           </div>
