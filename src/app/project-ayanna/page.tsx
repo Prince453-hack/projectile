@@ -82,8 +82,8 @@ const ProjectAyanna = () => {
             <div className="border border-gray-50 w-full sm:my-1" />
           </div>
 
-          <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-7">
-            {projectAyannaMembers.map(({ name, college, details }, index) => (
+          <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-7">
+            {projectAyannaMembers.map(({ name, college, details }) => (
               <Card
                 className={cn(
                   "border-none shadow-none relative bg-gradient-to-t from-[#000] to-[#1A1A1D] text-white rounded-2xl",
