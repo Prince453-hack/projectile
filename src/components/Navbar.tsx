@@ -44,6 +44,7 @@ const StickyNavbar: React.FC = () => {
                   alt="logo"
                   width={140}
                   height={70}
+                  draggable={false}
                 />
               </a>
             </div>

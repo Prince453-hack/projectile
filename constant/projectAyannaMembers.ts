@@ -98,7 +98,8 @@ export const projectAyannaMembers = [
   },
   {
     name: "Prasanna Surana",
-    college: "",
+    college:
+      "Masters from KTH Sweden and EPFL Switzerland, Will pursue his PHD from the US",
     country: "",
     details:
       "A passionate research scientist who pursued his Master’s in Nanotechnology from KTH Sweden and EPFL Switzerland ignited young minds with his unprecedented methods of propagating STEM among the underprivileged children. His ability to connect with the children made him a favourite among them. He is going to pursue PhD in fields like Bio-engineering and molecular medicine in future.",
