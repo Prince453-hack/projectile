@@ -7,7 +7,13 @@ const Footer = () => {
     <div className="bg-[rgb(3,0,91)] mt-16">
       <div className="py-6 px-4 sm:px-10 flex flex-col sm:flex-row gap-10 items-center justify-center">
         <div className="flex flex-1 justify-center sm:justify-start">
-          <Image src="/main-logo.jpg" width={150} height={150} alt="Logo" />
+          <Image
+            src="/main-logo.jpg"
+            width={150}
+            height={150}
+            alt="Logo"
+            draggable="false"
+          />
         </div>
 
         <div className="flex flex-col sm:flex-row space-y-5 sm:space-y-0 sm:space-x-5 text-white text-center sm:text-left text-sm">

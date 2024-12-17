@@ -24,6 +24,7 @@ export function MobileNav() {
               alt="Logo"
               width={120}
               height={50}
+              draggable={false}
             />
           </Link>
         </div>
@@ -42,6 +43,7 @@ export function MobileNav() {
                   alt="Logo"
                   width={160}
                   height={80}
+                  draggable={false}
                 />
               </Link>
             </nav>

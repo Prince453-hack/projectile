@@ -38,6 +38,7 @@ const Layout = ({ children }: Props) => {
               className="w-full h-[70%] mb-10"
               width={300}
               height={300}
+              draggable={false}
             />
 
             {Links.map(({ href, label }) => (
