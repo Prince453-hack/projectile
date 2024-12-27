@@ -1,7 +1,6 @@
 import StoriesSection from "@/components/Data";
 import Footer from "@/components/Footer";
 import StickyNavbar from "@/components/Navbar";
-import Popup from "@/components/Popup";
 import ProjectAyanna from "@/components/Project-Ayanna";
 import Slider from "@/components/Slider";
 import TabsSection from "@/components/TabsSection";
@@ -12,7 +11,6 @@ export default function Home() {
     <div className="select-none">
       <StickyNavbar />
       <Slider />
-      <Popup />
 
       <div className="" id="secure">
         {/* <h1 className="font-semibold text-3xl sm:text-4xl underline underline-offset-8">
