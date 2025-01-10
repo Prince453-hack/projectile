@@ -1,8 +1,4 @@
 export const navbarLinks = [
-  // {
-  //   label: "Community",
-  //   route: "#community",
-  // },
   {
     label: "Our Teams",
     route: "#teams",
@@ -14,5 +10,9 @@ export const navbarLinks = [
   {
     label: "Subscription",
     route: "/subscription",
+  },
+  {
+    label: "Internship & Volunteering",
+    route: "https://forms.gle/fKVk2UgtEc1eGxpj8",
   },
 ];
