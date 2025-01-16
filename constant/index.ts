@@ -11,8 +11,8 @@ export const navbarLinks = [
     label: "Subscription",
     route: "/subscription",
   },
-  // {
-  //   label: "Internship & Volunteering",
-  //   route: "https://forms.gle/fKVk2UgtEc1eGxpj8",
-  // },
+  {
+    label: "Internship & Volunteering",
+    route: "https://forms.gle/fKVk2UgtEc1eGxpj8",
+  },
 ];
